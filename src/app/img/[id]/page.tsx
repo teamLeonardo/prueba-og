@@ -8,6 +8,26 @@ export const generateMetadata = ({ params }: { params: { id: string } }): Metada
     const { id: idParam }: any = params
     const urlImg = getUrlImage(idParam);
     return {
+        title: 'Hoy gane la apuesta',
+        description: 'Muy buena apuesta',
+        twitter: {
+            card: 'summary_large_image',
+            title: 'Hoy gane la apuesta',
+            description: 'Muy buena apuesta',
+            images: [
+                {
+                    url: urlImg, // Dynamic og route
+                    width: 800,
+                    height: 600,
+                },
+                {
+                    url: urlImg, // Dynamic og route
+                    width: 1800,
+                    height: 1600,
+                    alt: 'Hoy gane la apuesta', // Optional
+                },
+            ],
+        },
         openGraph: {
             title: 'Hoy gane la apuesta',
             description: 'Muy buena apuesta',
