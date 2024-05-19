@@ -1,4 +1,5 @@
 import { Metadata } from 'next'; // if using TypeScript
+import { redirect } from 'next/navigation';
 const getUrlImage = (id: string) => `https://home.ripley.com.pe/Attachment/WOP_5/2018308544674/2018308544674-1.jpg`;
 
 // or Dynamic metadata
@@ -32,8 +33,10 @@ export const generateMetadata = ({ params }: { params: { id: string } }): Metada
 
 };
 export default function PageId({ params }: { params: { id: string } }) {
-    return (
-        <div>
-        </div>
-    );
+    redirect('https://www.apuestatotal.com/?id=' + params.id)
+    // return (
+    //     <div>
+            
+    //     </div>
+    // );
 }
