@@ -16,7 +16,8 @@ export async function generarImagen(data: any) {
   try {
     // Realizamos la llamada a la API para generar la imagen
     const queryParams = new URLSearchParams(data).toString();
-    const url = `http://localhost:3000/api/generate?${queryParams}`;
+    const host = process.env.DEV ? 'http://localhost:3000' : 'https://prueba-og.vercel.app';
+    const url = `${host}/api/generate?${queryParams}`;
     console.log(url);
     
     const response = await fetch(url, {
