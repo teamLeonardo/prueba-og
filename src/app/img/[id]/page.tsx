@@ -1,11 +1,9 @@
 import { Metadata } from 'next'; // if using TypeScript
 import { redirect } from 'next/navigation';
-const getUrlImage = (id: string) => `http://res.cloudinary.com/dr9prmfjk/image/upload/v1716178056/${id}.png`;
-
 
 export const generateMetadata = ({ params }: { params: { id: string } }): Metadata => {
     const { id: idParam }: any = params
-    const urlImg = getUrlImage(idParam);
+
     return {
         title: 'Hoy gane la apuesta',
         description: 'Muy buena apuesta',
@@ -15,12 +13,12 @@ export const generateMetadata = ({ params }: { params: { id: string } }): Metada
             description: 'Muy buena apuesta',
             images: [
                 {
-                    url: urlImg, // Dynamic og route
+                    url: `http://res.cloudinary.com/dr9prmfjk/image/upload/v1716178056/${idParam}.png`, // Dynamic og route
                     width: 800,
                     height: 600,
                 },
                 {
-                    url: urlImg, // Dynamic og route
+                    url: `http://res.cloudinary.com/dr9prmfjk/image/upload/v1716178056/${idParam}.png`, // Dynamic og route
                     width: 1800,
                     height: 1600,
                     alt: 'Hoy gane la apuesta', // Optional
@@ -34,12 +32,12 @@ export const generateMetadata = ({ params }: { params: { id: string } }): Metada
             siteName: 'www.apuestatotal.com',
             images: [
                 {
-                    url: urlImg, // Dynamic og route
+                    url: `http://res.cloudinary.com/dr9prmfjk/image/upload/v1716178056/${idParam}.png`, // Dynamic og route
                     width: 800,
                     height: 600,
                 },
                 {
-                    url: urlImg, // Dynamic og route
+                    url: `http://res.cloudinary.com/dr9prmfjk/image/upload/v1716178056/${idParam}.png`, // Dynamic og route
                     width: 1800,
                     height: 1600,
                     alt: 'Hoy gane la apuesta', // Optional
