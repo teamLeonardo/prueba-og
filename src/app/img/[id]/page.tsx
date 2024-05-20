@@ -1,5 +1,5 @@
 import { Metadata } from 'next'; // if using TypeScript
-import { redirect } from 'next/navigation';
+import ComponenteRedirect from './ComponenteRedirect';
 
 export const generateMetadata = ({ params }: { params: { id: string } }): Metadata => {
     const { id: idParam }: any = params
@@ -49,11 +49,9 @@ export const generateMetadata = ({ params }: { params: { id: string } }): Metada
     }
 
 };
-export default function PageId({ params }: { params: { id: string } }) {
-    redirect('https://www.apuestatotal.com/?id=' + params.id)
-    // return (
-    //     <div>
-            
-    //     </div>
-    // );
+
+export default function PageId() {
+    return (
+        <ComponenteRedirect />
+    );
 }
