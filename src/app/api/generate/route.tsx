@@ -1,7 +1,5 @@
 import { ImageResponse } from '@vercel/og'
-export const config = {
-  runtime: 'edge',
-}
+
 
 // const font = fetch(new URL('@host/assets/TYPEWR__.TTF', import.meta.url)).then(
 //   (res) => res.arrayBuffer()
@@ -14,7 +12,6 @@ export async function GET(request: Request) {
 
   const queryParams = Object.fromEntries(url.searchParams.entries());
 
-  console.log(queryParams);
   const stringQuery = JSON.stringify(queryParams, null, 2)
 
   return new ImageResponse(
