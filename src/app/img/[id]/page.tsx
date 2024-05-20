@@ -1,8 +1,7 @@
 import { Metadata } from 'next'; // if using TypeScript
 import { redirect } from 'next/navigation';
-const getUrlImage = (id: string) => `https://home.ripley.com.pe/Attachment/WOP_5/2018308544674/2018308544674-1.jpg`;
+const getUrlImage = (id: string) => `http://res.cloudinary.com/dr9prmfjk/image/upload/v1716178056/${id}.png`;
 
-// or Dynamic metadata
 
 export const generateMetadata = ({ params }: { params: { id: string } }): Metadata => {
     const { id: idParam }: any = params
