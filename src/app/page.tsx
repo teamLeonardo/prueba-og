@@ -43,19 +43,14 @@ const CardPage: React.FC = () => {
             >
               <img src={isImgData?.imgUrl} alt="" className="absolute z-0 top-0 left-0 w-full h-full object-cover" />
             </div>
-            <a className='p-2 text-sm text-gray-700 bg-white rounded-lg shadow-md' 
-            href={`${isImgData?.public_id}`} target="_blank" rel="noreferrer">
+            <a className="bg-[#4b9844] text-white py-3 px-5 rounded-full transition duration-200" 
+            href={`${isImgData?.link}`} target="_blank" rel="noreferrer">
               <span className="text-gray-700">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </span>
-              <span className="ml-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 17h4a2 2 0 002-2V5a2 2 0 00-2-2h-4" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 17h4a2 2 0 002-2v-4a2 2 0 00-2-2h-4" />
-                </svg>
-              </span>
+              Abrir enlace
             </a>
           </>
 
